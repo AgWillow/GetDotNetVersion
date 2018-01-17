@@ -20,7 +20,8 @@ public class GetDotNetVersion {
     }
 
     private static (int releaseKey, string version)[] versionMap = {
-        (461308, "4.7.1"), (460798, "4.7"), (394802, "4.6.2"), (394254, "4.6.1"), (393295, "4.6"), (379893, "4.5.2"), (378675, "4.5.1"), (378389, "4.5"), (0, null)
+        (461308, "4.7.1"), (460798, "4.7"), (394802, "4.6.2"), (394254, "4.6.1"),
+        (393295, "4.6"), (379893, "4.5.2"), (378675, "4.5.1"), (378389, "4.5"), (0, null)
     };
 
     // Checking the version using >= enables forward compatibility.
