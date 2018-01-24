@@ -11,6 +11,7 @@ public class GetDotNetVersion {
     private static void Get45PlusFromRegistry() {
 
         const string subkey = @"SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\";
+        versionMap = versionMap.OrderByDescending(v => v.releaseKey).ToArray();
 
         using (RegistryKey ndpKey = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry32).OpenSubKey(subkey)) {
             var message = ndpKey?.GetValue("Release") is int releaseKey ? ".NET Framework Version: " + CheckFor45PlusVersion(releaseKey)
